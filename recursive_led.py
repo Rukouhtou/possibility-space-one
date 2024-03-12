@@ -1,5 +1,3 @@
-from pprint import pprint
-
 '''
 'digit number' = 'led required'.
 total_led = [1,1,1,1,1,1,1]
@@ -23,7 +21,7 @@ Q. There are switches can light on connected leds.
 ip_list = ['381', '92']
 
 def recursive(tensor, overlapped):
-    pprint(tensor)
+    print(tensor)
     zipped = [[list(i) for i in zip(*batch) if (0 in i and 1 in i)] for batch in tensor]
     unzipped = [[list(i) for i in zip(*batch) if 1 in i] for batch in zipped]
     unzipped = [[[]] if len(batch) == 0 else batch for batch in unzipped ]
