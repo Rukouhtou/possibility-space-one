@@ -18,7 +18,7 @@ Q. There are switches can light on connected leds.
  find a list which has least switch numbers to activate as elements.
 '''
 
-ip_list = ['381', '92']
+input_list = ['381', '92']
 
 def recursive(tensor, overlapped):
     print(tensor)
@@ -53,4 +53,4 @@ def solution(ip):
     answer = recursive(encoded_list, answer)
     return answer
 
-print(solution(ip_list))
+print(solution(input_list))
