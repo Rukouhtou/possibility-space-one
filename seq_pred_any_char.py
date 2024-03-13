@@ -12,7 +12,7 @@ x_data = [sample_idx[:-1]]
 # hyper parameters
 input_size = len(char_dict)
 hidden_size = len(char_dict)
-learning_rate = 1e-1
+learning_rate = 5e-3
 
 x_one_hot = [np.eye(input_size)[x] for x in x_data]
 y_data = [sample_idx[1:]]
@@ -28,7 +28,7 @@ rnn = torch.nn.RNN(input_size, hidden_size, batch_first=True)
 criterion = torch.nn.CrossEntropyLoss()
 optimizer = torch.optim.Adam(rnn.parameters(), learning_rate)
 
-for i in range(100):
+for i in range(1000):
     optimizer.zero_grad()
     outputs, status = rnn(X)
     loss = criterion(outputs.view(-1, input_size), Y.view(-1))
