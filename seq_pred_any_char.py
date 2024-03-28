@@ -12,7 +12,7 @@ x_data = [sample_idx[:-1]]
 # hyper parameters
 input_size = len(char_dict)
 hidden_size = len(char_dict)
-learning_rate = 5e-3
+learning_rate = 6e-3
 
 x_one_hot = [np.eye(input_size)[x] for x in x_data]
 y_data = [sample_idx[1:]]
