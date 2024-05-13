@@ -10,3 +10,7 @@ print(t3)
 
 t3 = time.time()
 print(t3)
+
+# Pull before commit, push
+# merge branch will be created by Git if you wont pull other worker's version
+# the reason for making merge branch is for keeping data.
