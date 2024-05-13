@@ -10,3 +10,5 @@ print(t3)
 
 t3 = time.time()
 print(t3)
+
+# pull = fetch + merge
