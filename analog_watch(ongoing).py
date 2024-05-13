@@ -68,4 +68,4 @@ def solution(h1, m1, s1 ,h2, m2, s2):
 # print(solution(11,59,30,12,0,0))
 # print(solution(11,58,59,11,59,0))
 # print(solution(1,5,5,1,5,6))
-print(solution(0,0,0,23,59,59))
+print(solution(0,0,0,23,59,59))     ## should be 2852
