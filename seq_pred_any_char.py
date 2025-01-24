@@ -1,10 +1,10 @@
 import torch
 import numpy as np
 
-sample = ' life is short deal with it.'
+sample = " life is short deal with it."
 
 char_set = list(set(sample))
-char_dict = {c:i for i, c in enumerate(char_set)}
+char_dict = {c: i for i, c in enumerate(char_set)}
 
 sample_idx = [char_dict[c] for c in sample]
 x_data = [sample_idx[:-1]]
@@ -35,5 +35,7 @@ for i in range(1000):
     loss.backward()
     optimizer.step()
     result = outputs.data.numpy().argmax(axis=2)
-    result_str = ''.join([char_set[c] for c in np.squeeze(result)])
-    print(f'i loss: {loss.item()}, \nprediction: \n{result}, \ntrue Y: \n{np.array(y_data)}, \npredicted str: {result_str}')
+    result_str = "".join([char_set[c] for c in np.squeeze(result)])
+    print(
+        f"i loss: {loss.item()}, \nprediction: \n{result}, \ntrue Y: \n{np.array(y_data)}, \npredicted str: {result_str}"
+    )

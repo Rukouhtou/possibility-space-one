@@ -15,17 +15,17 @@
 
 
 tripose = []
-for t in range(3600*24):
-    h = 5/3600*t
+for t in range(3600 * 24):
+    h = 5 / 3600 * t
     if h >= 60:
         h -= 60
-    m = 1/60*t
+    m = 1 / 60 * t
     if m >= 60:
         m -= 60
     s = t
     if s >= 60:
         s -= 60
-    
+
     if h == m == s:
         tripose.append(t)
         print(t)
